@@ -5,7 +5,7 @@ import scrollIcon from "../assets/icons/scroll-animation.svg";
 export const HeroSect = () => {
   return (
     <>
-      <div className="hero-section w-full h-full flex justify-between relative">
+      <div className="hero-section w-full h-[80vh] flex justify-between relative">
         <div className="heroText h-full w-full z-30">
           <div className="flex flex-col text-white pl-5">
             <span className="font-semibold text-2xl">Hi! I&apos;m Irfan,</span>
@@ -22,8 +22,8 @@ export const HeroSect = () => {
             </span>
           </div>
           <div className="social-icons flex w-8 gap-3 h-20 ml-5">
-            <img className="w-7" src={linkedin} alt="" />
-            <img src={github} alt="" />
+            <img className="w-6" src={linkedin} alt="" />
+            <img className="w-7" src={github} alt="" />
           </div>
           <div className="buttons absolute w-full bottom-10 flex items-center flex-col text-white gap-3 text-[10px] tracking-widest">
             <button className="bg-color1 hover:bg-color1Hover w-2/3 py-3 rounded-3xl uppercase text-center font-semibold cursor-pointer">
@@ -40,7 +40,7 @@ export const HeroSect = () => {
             src={heroIllustration}
             alt=""
           />
-          <div className="absolute bottom-36">
+          <div className="absolute bottom-40">
             <div className="scroll-icon">
               <img className="w-5" src={scrollIcon} alt="" />
             </div>

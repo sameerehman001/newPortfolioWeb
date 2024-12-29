@@ -6,7 +6,7 @@ export const Navbar = () => {
     const [toggle, setToggle] = useState(false);
   return (
     <>
-      <nav className="flex justify-between px-5 py-10">
+      <nav className="flex h-[15vh] justify-between px-5 py-10">
         <div className="logo">
           <img className="w-24" src={logo} alt="" />
         </div>
@@ -14,7 +14,7 @@ export const Navbar = () => {
           <img className="w-8" src={menu} alt="" />
         </div>
       </nav>
-      <div className={`${toggle ? "flex" : "hidden"} flex-col items-center absolute w-screen h-screen rounded-md bg-black/30 z-40 backdrop-blur-md gap-y-20`}>
+      <div className={`${toggle ? "flex" : "hidden"} flex-col items-center fixed top-0 w-full h-screen rounded-md bg-black/30 z-50 backdrop-blur-md gap-y-20`}>
       <div className="close">
         <img onClick={() => setToggle(!toggle)}  className="w-10 absolute right-4 top-8" src={close} alt="" />
       </div>
