@@ -78,7 +78,7 @@ export const RadarChart = () => {
   };
 
   return (
-    <div className="bg-white/5 h-[45vh] flex justify-center" style={{ width: "100%", margin: "auto", padding: "20px" }}>
+    <div className="flex justify-center" style={{ width: "100%", margin: "auto", padding: "20px" }}>
       <Radar data={data} options={options} />
     </div>
   );
