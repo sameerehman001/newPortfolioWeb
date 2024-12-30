@@ -6,7 +6,7 @@ export const ProjectSection = () => {
   return (
     <>
       <div className="w-full h-full mt-20 flex flex-col">
-        <div className="project-title text-5xl h-screen tracking-widest font-regular uppercase text-white h-full flex justify-center items-center">
+        <div className="project-title text-5xl h-screen tracking-widest font-regular uppercase text-white flex justify-center items-center">
           Projects
         </div>
         <div className="h-full px-3 flex flex-col gap-y-10">
