@@ -6,15 +6,22 @@ export const Navbar = () => {
     const [toggle, setToggle] = useState(false);
   return (
     <>
-      <nav className="flex h-[15vh] justify-between px-5 py-10">
+    <div className="flex w-full justify-center">
+      <nav className="flex h-[15vh] w-full justify-between px-5 py-10 max-w-[60rem]">
         <div className="logo">
-          <img className="w-24" src={logo} alt="" />
+          <img className="w-24 md:w-28" src={logo} alt="" />
         </div>
-        <div onClick={() => setToggle(!toggle)} className="menu">
+        <div onClick={() => setToggle(!toggle)} className="menu md:hidden">
           <img className="w-8" src={menu} alt="" />
         </div>
+        <div className="menu-items hidden md:flex gap-8 text-xs text-white uppercase">
+          <div className="menu-item">Home</div>
+          <div className="menu-item">Projects</div>
+          <div className="menu-item">About Us</div>
+        </div>
       </nav>
-      <div className={`${toggle ? "flex" : "hidden"} flex-col items-center fixed top-0 w-full h-screen rounded-md bg-black/30 z-50 backdrop-blur-md gap-y-20`}>
+    </div>
+      <div className={`${toggle ? "flex": "hidden"} flex-col items-center fixed top-0 w-full h-screen rounded-md bg-black/30 z-50 backdrop-blur-md gap-y-20`}>
       <div className="close">
         <img onClick={() => setToggle(!toggle)}  className="w-10 absolute right-4 top-8" src={close} alt="" />
       </div>

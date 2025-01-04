@@ -18,6 +18,9 @@ export default {
       },
       fontFamily:{
         sora:["Sora","sans"]
+      },
+      width:{
+        radarWidth:"40rem!important"
       }
     },
   },

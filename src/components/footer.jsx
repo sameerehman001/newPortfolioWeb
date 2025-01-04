@@ -5,7 +5,8 @@ export const Footer = () =>{
     return(
         <>
             <div className="flex flex-col w-full my-20">
-                <div className="nav-items w-full flex justify-center gap-5 text-white text-center text-xs font-light uppercase">
+                <div className="w-full h-[1px] bg-white/20"></div>
+                <div className="nav-items w-full flex justify-center gap-5 text-white text-center text-xs font-light uppercase mt-5">
                     <div className="nav-option">Home</div>
                     <div className="nav-option">About Us</div>
                     <div className="nav-option">Projects</div>
