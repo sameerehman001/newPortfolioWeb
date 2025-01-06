@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
-export const ProjectCard = ({ projectImage, mainTitle, subTitle }) => {
+export const ProjectCard = ({ projectImage, mainTitle, subTitle, setOpenInsights }) => {
+  const openInsightsPanel = () =>{
+   setOpenInsights(true);
+  }
   return (
     <>
       <div className="project-card flex flex-col bg-white/5 w-[20rem] h-[20rem] rounded-md py-5 px-3">
@@ -20,7 +23,7 @@ export const ProjectCard = ({ projectImage, mainTitle, subTitle }) => {
           </div>
         </div>
         <div className="buttons flex gap-2 w-full text-[12px]">
-          <button className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-1/2 h-[5vh] tracking-widest">
+          <button onClick={()=>openInsightsPanel()} className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-1/2 h-[5vh] tracking-widest">
             Explore Insights
           </button>
           <button className="text-color2 border-2 border-color2 hover:bg-color2 hover:text-color3 rounded-3xl text-center font-semibold cursor-pointer w-1/2 h-[5vh] tracking-widest">
@@ -35,4 +38,5 @@ ProjectCard.propTypes = {
   projectImage: PropTypes.string,
   mainTitle: PropTypes.string,
   subTitle: PropTypes.string,
+  setOpenInsights: PropTypes.func,
 };

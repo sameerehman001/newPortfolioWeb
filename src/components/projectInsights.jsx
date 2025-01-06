@@ -1,52 +1,9 @@
-import { useEffect, useState } from "react";
-import project1 from "../assets/images/Project-image/project1.png";
-import project2 from "../assets/images/Project-image/project2.png";
-import icon1 from "../assets/icons/skills-icon/javascript.svg";
-import icon2 from "../assets/icons/skills-icon/react-js.svg";
-import icon3 from "../assets/icons/skills-icon/tailwindcss.svg";
-import icon4 from "../assets/icons/skills-icon/figma.svg";
-import icon5 from "../assets/icons/skills-icon/css.svg";
-import icon6 from "../assets/icons/skills-icon/nextjs.svg";
-import icon7 from "../assets/icons/skills-icon/mongodb.svg";
-import icon8 from "../assets/icons/skills-icon/nodejs.svg";
 import closeBtn from "../assets/icons/close.svg";
-import { ProjectCard } from "./ProjectCard";
-export const ProjectSection = () => {
-  const [stopScroll, setStopScroll] = useState(false);
 
-  const handleInsightPanel = (status) => {
-    setStopScroll(status);
-    console.log(stopScroll);
-  };
-  useEffect(() => {
-    if (stopScroll) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [stopScroll]);
-  return (
-    <>
-      <div id="Projects" className="w-full h-full mt-20 flex flex-col">
-        <div className="project-title text-6xl md:text-8xl h-screen tracking-tight font-semibold uppercase text-white flex justify-center items-center animate-pulse">
-          <div className="bg-color1/40 rounded-full absolute size-40 blur-[50px] z-10"></div>
-          Projects
-        </div>
-        <div className="h-full px-3 flex flex-wrap justify-center gap-10">
-          <ProjectCard
-            projectImage={project1}
-            mainTitle={"OncoScence"}
-            subTitle={"Lung Cancer Detection System"}
-            setOpenInsights={handleInsightPanel}
-          />
-          <ProjectCard
-            projectImage={project2}
-            mainTitle={"OncoScence"}
-            subTitle={"Lung Cancer Detection System"}
-            setOpenInsights={handleInsightPanel}
-          />
-        </div>
-        <div
+export const ProjectInsights = () =>{
+    return(
+        <>
+         <div
           className={`"project-insights ${
             stopScroll ? "flex" : "hidden"
           } fixed top-0 w-full h-full justify-center items-center z-[100] bg-black/20 backdrop-blur-sm overflow-hidden"`}
@@ -97,7 +54,6 @@ export const ProjectSection = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
-  );
-};
+        </>
+    )
+}

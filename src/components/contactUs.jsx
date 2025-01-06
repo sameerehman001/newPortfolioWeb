@@ -3,8 +3,8 @@ import { Footer } from "./footer";
 export const ContactUs = () => {
   return (
     <>
-      <div className="h-screen">
-        <div className="project-title text-7xl md:text-9xl h-screen tracking-wide font-extrabold leading-snug uppercase text-white flex items-center md:justify-center mt-20">
+      <div id="Contact" className="h-screen">
+        <div className="project-title text-7xl md:text-9xl h-screen tracking-wide font-extrabold leading-snug uppercase text-white flex items-center md:justify-center">
           <div className="bg-color1/40 rounded-full absolute size-80 blur-[100px] z-10"></div>
           <p className="z-30 animate-pulse pl-5">
             Get <br className="md:hidden" /> in <br className="md:hidden" /> Touch

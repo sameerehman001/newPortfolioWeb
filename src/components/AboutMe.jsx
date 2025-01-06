@@ -13,8 +13,8 @@ import tailwind from "../assets/icons/skills-icon/tailwindcss.svg";
 export const AboutMe = () => {
   return (
     <>
-      <div className="flex justify-center">
-        <div className="w-full mt-5 px-3 md:mt-20 max-w-[60rem]">
+      <div id="About" className="flex justify-center">
+        <div className="w-full px-3 max-w-[60rem]">
           <div className="project-title text-5xl md:text-8xl h-screen tracking-wide font-extrabold leading-snug uppercase text-white flex max-md:justify-center items-center">
             <div className="bg-color1/40 rounded-full absolute size-80 blur-[100px] z-10"></div>
             <p className="z-30 animate-pulse">
@@ -56,10 +56,10 @@ export const AboutMe = () => {
               <br className="max-sm:hidden" /> Skills
             </p>
           </div>
-          <div className="h-screen flex max-md:flex-col gap-y-5">
+          <div className="h-screen flex max-md:flex-col md:items-center gap-5">
             <div className="flex flex-col md:w-1/2">
-              <div className="flex flex-col p-5 max-md:items-center">
-                <div className="text-white text-3xl tracking-wide font-semibold mt-5">
+              <div className="flex flex-col justify-center p-5 max-md:items-center">
+                <div className="text-white text-3xl tracking-wide font-semibold mt-5 self-start">
                   About Skills
                 </div>
                 <div className="about-me text-white text-lg leading-6 mt-3 text-justify max-w-[40rem]">
@@ -83,7 +83,7 @@ export const AboutMe = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col mt-5 items-center md:w-1/2">
+            <div className="flex flex-col items-center md:w-1/2">
               <div className="text-color3 px-3 text-lg font-semibold tracking-wide bg-color2 rounded-3xl md:text-base">
                 Skills Overview Radar
               </div>

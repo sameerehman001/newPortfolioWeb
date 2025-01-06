@@ -78,7 +78,7 @@ export const RadarChart = () => {
   };
 
   return (
-    <div className="flex justify-center mt-10 h-full" style={{ width: "100%" }}>
+    <div className="flex justify-center mt-5 h-full" style={{ width: "100%" }}>
       <Radar className="md:w-radarWidth " data={data} options={options} />
     </div>
   );
