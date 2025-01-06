@@ -1,22 +1,14 @@
 import { useEffect, useState } from "react";
-import project1 from "../assets/images/Project-image/project1.png";
-import project2 from "../assets/images/Project-image/project2.png";
-import icon1 from "../assets/icons/skills-icon/javascript.svg";
-import icon2 from "../assets/icons/skills-icon/react-js.svg";
-import icon3 from "../assets/icons/skills-icon/tailwindcss.svg";
-import icon4 from "../assets/icons/skills-icon/figma.svg";
-import icon5 from "../assets/icons/skills-icon/css.svg";
-import icon6 from "../assets/icons/skills-icon/nextjs.svg";
-import icon7 from "../assets/icons/skills-icon/mongodb.svg";
-import icon8 from "../assets/icons/skills-icon/nodejs.svg";
-import closeBtn from "../assets/icons/close.svg";
+import { ProjectInsights } from "./projectInsights";
 import { ProjectCard } from "./ProjectCard";
+import { Projects } from "./constant";
 export const ProjectSection = () => {
   const [stopScroll, setStopScroll] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleInsightPanel = (status) => {
+  const handleInsightPanel = (status, project = null) => {
     setStopScroll(status);
-    console.log(stopScroll);
+    setSelectedProject(project);
   };
   useEffect(() => {
     if (stopScroll) {
@@ -33,70 +25,33 @@ export const ProjectSection = () => {
           Projects
         </div>
         <div className="h-full px-3 flex flex-wrap justify-center gap-10">
-          <ProjectCard
-            projectImage={project1}
-            mainTitle={"OncoScence"}
-            subTitle={"Lung Cancer Detection System"}
-            setOpenInsights={handleInsightPanel}
-          />
-          <ProjectCard
-            projectImage={project2}
-            mainTitle={"OncoScence"}
-            subTitle={"Lung Cancer Detection System"}
-            setOpenInsights={handleInsightPanel}
-          />
-        </div>
-        <div
-          className={`"project-insights ${
-            stopScroll ? "flex" : "hidden"
-          } fixed top-0 w-full h-full justify-center items-center z-[100] bg-black/20 backdrop-blur-sm overflow-hidden"`}
-        >
-          <div className="bg-deepBlue backdrop-blur-md rounded-2xl h-fit w-[20rem] z-[101] relative text-white font-semibold border-2 border-white py-3">
-            <div className="absolute right-3 top-3 border-2 border-white rounded-full p-1">
-              <img
-                onClick={() => handleInsightPanel(false)}
-                className="w-6 cursor-pointer"
-                src={closeBtn}
-                alt=""
+          {Object.keys(Projects).map((key) => {
+            const project = Projects[key];
+            return (
+              <ProjectCard
+                key={key}
+                projectImage={project.image}
+                title={project.title}
+                subTitle={project.subTitle}
+                setOpenInsights={(status) =>
+                  handleInsightPanel(status, project)
+                }
+                githubLink={project.githubLink}
               />
-            </div>
-            <div className="project-insight-text flex flex-col h-full p-4 gap-y-5 mt-5">
-              <div className="Project-name text-3xl">OncoScence</div>
-              <div className="Project-overview flex flex-col">
-                <span className="text-lg">Overview</span>
-                <span className="text-xs text-justify">
-                  OncoScence is a lung cancer detection system designed to
-                  analyze X-ray images efficiently. This project simplifies the
-                  diagnostic process by providing real-time insights, improving
-                  accuracy, and reducing diagnostic time for doctors.
-                </span>
-              </div>
-              <div className="category text-lg flex flex-col">
-                Category{" "}
-                <span className="font-light text-xs">
-                  Healthcare, AI/ML, Web Application
-                </span>
-              </div>
-              <div className="project-tech-stack flex flex-col gap-1">
-                <div className="title text-lg">Tech Stack</div>
-                <div className="tech-icons grid grid-cols-4 gap-5">
-                  <img className="w-10" src={icon1} alt="" />
-                  <img className="w-10" src={icon2} alt="" />
-                  <img className="w-10" src={icon3} alt="" />
-                  <img className="w-10" src={icon4} alt="" />
-                  <img className="w-10" src={icon5} alt="" />
-                  <img className="w-10" src={icon6} alt="" />
-                  <img className="w-10" src={icon7} alt="" />
-                  <img className="w-10" src={icon8} alt="" />
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 mt-2">
-                <span className="text-white text-xs">Get the detailed Report</span>
-                <button className="border-2 border-color2 text-color2 rounded-full w-1/2 py-2 text-xs hover:bg-color2 hover:text-color3">Download Now</button>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
+        {selectedProject && (
+          <ProjectInsights
+            stopScroll={stopScroll}
+            handleInsightPanel={handleInsightPanel}
+            title={selectedProject.title}
+            desc={selectedProject.insights.desc}
+            category={selectedProject.insights.category}
+            techstack={selectedProject.insights.techStack}
+            reportLink={selectedProject.insights.reportLink}
+          />
+        )}
       </div>
     </>
   );

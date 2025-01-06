@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-export const ProjectCard = ({ projectImage, mainTitle, subTitle, setOpenInsights }) => {
+export const ProjectCard = ({ projectImage, title, subTitle, setOpenInsights,githubLink }) => {
   const openInsightsPanel = () =>{
    setOpenInsights(true);
   }
@@ -7,16 +7,16 @@ export const ProjectCard = ({ projectImage, mainTitle, subTitle, setOpenInsights
     <>
       <div className="project-card flex flex-col bg-white/5 w-[20rem] h-[20rem] rounded-md py-5 px-3">
         <div className="project-image bg-white/5 w-full h-1/2 rounded-md flex flex-col justify-between">
-          <div className="flex gap-1 py-1 pl-2 h-1/5">
+          <div className="flex gap-1 py-1 pl-2 h-1/6">
             <div className="size-1 bg-red-500 rounded-full"></div>
             <div className="size-1 bg-yellow-400 rounded-full"></div>
             <div className="size-1 bg-green-400 rounded-full"></div>
           </div>
-          <img className="w-full" src={projectImage} alt="" />
+          <img className="w-full rounded-b-md" src={projectImage} alt="" />
         </div>
         <div className="project-text flex flex-col h-2/5 justify-center gap-y-1">
           <div className="main-title text-2xl text-white font-semibold">
-            {mainTitle}
+            {title}
           </div>
           <div className="sub-title text-white font-extralight text-xs tracking-wider">
             {subTitle}
@@ -26,9 +26,11 @@ export const ProjectCard = ({ projectImage, mainTitle, subTitle, setOpenInsights
           <button onClick={()=>openInsightsPanel()} className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-1/2 h-[5vh] tracking-widest">
             Explore Insights
           </button>
-          <button className="text-color2 border-2 border-color2 hover:bg-color2 hover:text-color3 rounded-3xl text-center font-semibold cursor-pointer w-1/2 h-[5vh] tracking-widest">
+          <a className="w-1/2" href={githubLink} target="_blank">
+          <button className="text-color2 border-2 border-color2 hover:bg-color2 hover:text-color3 rounded-3xl text-center font-semibold cursor-pointer w-full h-[5vh] tracking-widest">
             View in Github
           </button>
+          </a>
         </div>
       </div>
     </>
@@ -36,7 +38,8 @@ export const ProjectCard = ({ projectImage, mainTitle, subTitle, setOpenInsights
 };
 ProjectCard.propTypes = {
   projectImage: PropTypes.string,
-  mainTitle: PropTypes.string,
+  title: PropTypes.string,
   subTitle: PropTypes.string,
   setOpenInsights: PropTypes.func,
+  githubLink: PropTypes.string,
 };

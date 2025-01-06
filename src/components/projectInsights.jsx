@@ -1,6 +1,7 @@
+import PropTypes from "prop-types"
 import closeBtn from "../assets/icons/close.svg";
 
-export const ProjectInsights = () =>{
+export const ProjectInsights = ({stopScroll,handleInsightPanel,title,desc,category,techstack,reportLink}) =>{
     return(
         <>
          <div
@@ -18,42 +19,48 @@ export const ProjectInsights = () =>{
               />
             </div>
             <div className="project-insight-text flex flex-col h-full p-4 gap-y-5 mt-5">
-              <div className="Project-name text-3xl">OncoScence</div>
+              <div className="Project-name text-3xl">{title}</div>
               <div className="Project-overview flex flex-col">
                 <span className="text-lg">Overview</span>
                 <span className="text-xs text-justify">
-                  OncoScence is a lung cancer detection system designed to
-                  analyze X-ray images efficiently. This project simplifies the
-                  diagnostic process by providing real-time insights, improving
-                  accuracy, and reducing diagnostic time for doctors.
+                 {desc}
                 </span>
               </div>
               <div className="category text-lg flex flex-col">
                 Category{" "}
                 <span className="font-light text-xs">
-                  Healthcare, AI/ML, Web Application
+                 {category}
                 </span>
               </div>
               <div className="project-tech-stack flex flex-col gap-1">
                 <div className="title text-lg">Tech Stack</div>
                 <div className="tech-icons grid grid-cols-4 gap-5">
-                  <img className="w-10" src={icon1} alt="" />
-                  <img className="w-10" src={icon2} alt="" />
-                  <img className="w-10" src={icon3} alt="" />
-                  <img className="w-10" src={icon4} alt="" />
-                  <img className="w-10" src={icon5} alt="" />
-                  <img className="w-10" src={icon6} alt="" />
-                  <img className="w-10" src={icon7} alt="" />
-                  <img className="w-10" src={icon8} alt="" />
+                   {
+                    techstack.map((item,index) => (
+                      <img key={index} className="w-10" src={item} alt="" />
+                    ))
+                   }
                 </div>
               </div>
               <div className="flex flex-col gap-3 mt-2">
                 <span className="text-white text-xs">Get the detailed Report</span>
-                <button className="border-2 border-color2 text-color2 rounded-full w-1/2 py-2 text-xs hover:bg-color2 hover:text-color3">Download Now</button>
+                <a onClick={()=>reportLink==""&&alert("Sorry! Currently Report is not available")} href={reportLink}>
+                    <button className="border-2 border-color2 text-color2 rounded-full w-1/2 py-2 text-xs hover:bg-color2 hover:text-color3">Download Now</button>
+                </a>
               </div>
             </div>
           </div>
         </div>
         </>
     )
+}
+
+ProjectInsights.propTypes = {
+    stopScroll: PropTypes.bool,
+    handleInsightPanel: PropTypes.func,
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    category: PropTypes.string,
+    techstack: PropTypes.array,
+    reportLink: PropTypes.string,
 }

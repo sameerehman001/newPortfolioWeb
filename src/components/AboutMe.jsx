@@ -42,7 +42,7 @@ export const AboutMe = () => {
                 dedicated to creating dynamic and responsive websites that
                 deliver seamless user experiences.
               </div>
-              <button className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-widest text-sm mt-5">
+              <button onClick={()=>alert("Sorry! Currently CV is not available...")} className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-widest text-sm mt-5">
                 Download CV
               </button>
             </div>
@@ -57,7 +57,7 @@ export const AboutMe = () => {
             </p>
           </div>
           <div className="h-screen flex max-md:flex-col md:items-center gap-5">
-            <div className="flex flex-col md:w-1/2">
+            <div className="flex flex-col md:w-1/2 h-3/4">
               <div className="flex flex-col justify-center p-5 max-md:items-center">
                 <div className="text-white text-3xl tracking-wide font-semibold mt-5 self-start">
                   About Skills
@@ -83,7 +83,7 @@ export const AboutMe = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center md:w-1/2">
+            <div className="flex flex-col items-center md:w-1/2 h-3/4">
               <div className="text-color3 px-3 text-lg font-semibold tracking-wide bg-color2 rounded-3xl md:text-base">
                 Skills Overview Radar
               </div>

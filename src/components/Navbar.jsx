@@ -15,13 +15,13 @@ export const Navbar = () => {
             <img className="w-8" src={menu} alt="" />
           </div>
           <div className="menu-items hidden md:flex gap-8 text-xs text-white uppercase z-30">
-            <a href="#Home" className="menu-item cursor-pointer">
+            <a href="#Home" className="menu-item cursor-pointer hover:text-white/60">
               Home
             </a>
-            <a href="#Projects" className="menu-item cursor-pointer">
+            <a href="#Projects" className="menu-item cursor-pointer hover:text-white/60">
               Projects
             </a>
-            <a href="#About" className="menu-item cursor-pointer">
+            <a href="#About" className="menu-item cursor-pointer hover:text-white/60">
               About Us
             </a>
           </div>
@@ -50,7 +50,7 @@ export const Navbar = () => {
           <a onClick={() => setToggle(!toggle)} href="#About" className="menu-item cursor-pointer">
             About Us
           </a>
-          <a onClick={() => setToggle(!toggle)} href="#" className="menu-item cursor-pointer">
+          <a onClick={() => setToggle(!toggle)&alert('Page is under Development')} href="#" className="menu-item cursor-pointer">
             Blog
           </a>
           <a onClick={() => setToggle(!toggle)} href="#Contact" className="buttons w-full flex flex-col items-center text-white mt-3 gap-3 text-[11px] tracking-widest">

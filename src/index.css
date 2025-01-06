@@ -13,3 +13,6 @@
 *{
     scroll-behavior: smooth;
 }
+.custom-stroke{
+    stroke:red!important;
+}

@@ -21,7 +21,7 @@ export default {
       },
       width:{
         radarWidth:"40rem!important"
-      }
+      },
     },
   },
   plugins: [],
