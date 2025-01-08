@@ -57,7 +57,7 @@ export const Projects = {
         "subTitle": "Healthcare E-commerce, Web Application",
         "insights": {
             "desc": `E-Medicine is an online platform designed to streamline the purchase and management of medicines. The application offers users a convenient way to browse, search, and order medications, ensuring quick access to essential healthcare products. `,
-            "category": "Education, Interactive Quiz Application, Web Development",
+            "category": "Healthcare site, Web Development",
             "techStack": [react, tailwind, html, css, js],
             "reportLink": ""
         },
