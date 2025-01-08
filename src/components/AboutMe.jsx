@@ -42,7 +42,10 @@ export const AboutMe = () => {
                 dedicated to creating dynamic and responsive websites that
                 deliver seamless user experiences.
               </div>
-              <button onClick={()=>alert("Sorry! Currently CV is not available...")} className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-widest text-sm mt-5">
+              <button
+                onClick={() => alert("Sorry! Currently CV is not available...")}
+                className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-widest text-sm mt-5"
+              >
                 Download CV
               </button>
             </div>
