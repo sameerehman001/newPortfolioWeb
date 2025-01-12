@@ -187,7 +187,7 @@ export const AboutMe = () => {
               whileInView={{opacity:1,scale:1}}
               transition={{duration: 0.5,delay:0.2}}
               viewport={{amount:0.7}}
-              className="w-full will-change-transform will-change-opacity">
+              className="w-full h-full will-change-transform will-change-opacity">
                 <RadarChart />
               </motion.div>
             </div>

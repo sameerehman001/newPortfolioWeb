@@ -13,15 +13,17 @@ export const ProjectInsights = ({
 }) => {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, ease:"easeInOut" }}
+      <div
         className={`"project-insights will-change-transform will-change-opacity ${
           stopScroll ? "flex" : "hidden"
         } fixed top-0 w-full h-full justify-center items-center z-[100] bg-black/20 backdrop-blur-sm overflow-hidden"`}
       >
-        <div className="bg-deepBlue backdrop-blur-md rounded-2xl h-fit w-[20rem] z-[101] relative text-white font-semibold border-2 border-white py-3">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="bg-deepBlue backdrop-blur-md rounded-2xl h-fit w-[20rem] z-[101] relative text-white font-semibold border-2 border-white py-3"
+        >
           <div className="absolute right-3 top-3 border-2 border-white rounded-full p-1">
             <img
               onClick={() => handleInsightPanel(false)}
@@ -64,8 +66,8 @@ export const ProjectInsights = ({
               </a>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </>
   );
 };
