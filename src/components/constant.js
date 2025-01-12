@@ -13,15 +13,15 @@ import react from "../assets/icons/skills-icon/react-js.svg";
 import tailwind from "../assets/icons/skills-icon/tailwindcss.svg";
 import php from "../assets/icons/skills-icon/php.svg";
 
-// project-images
-import onco from "../assets/images/Project-image/project1.png"
-import qz from "../assets/images/Project-image/project2.png"
-import tesla from "../assets/images/Project-image/project3.png"
-import emd from "../assets/images/Project-image/project4.png"
-import algo from "../assets/images/Project-image/project5.png"
-import furni from "../assets/images/Project-image/project6.png"
-import ftc from "../assets/images/Project-image/project7.png"
-import ngo from "../assets/images/Project-image/project8.png"
+// projectImagess
+import onco from "../assets/images/projectImages/project1.png"
+import qz from "../assets/images/projectImages/project2.png"
+import tesla from "../assets/images/projectImages/project3.png"
+import emd from "../assets/images/projectImages/project4.png"
+import algo from "../assets/images/projectImages/project5.png"
+import furni from "../assets/images/projectImages/project6.png"
+import ftc from "../assets/images/projectImages/project7.png"
+import ngo from "../assets/images/projectImages/project8.png"
 
 export const Projects = {
     "Onco": {
