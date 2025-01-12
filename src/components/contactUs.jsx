@@ -1,4 +1,5 @@
-import msgIcon from "../assets/icons/mail.png"
+import { motion } from "motion/react";
+import msgIcon from "../assets/icons/mail.png";
 import { Footer } from "./footer";
 export const ContactUs = () => {
   return (
@@ -6,18 +7,51 @@ export const ContactUs = () => {
       <div id="Contact" className="h-screen">
         <div className="project-title text-7xl md:text-9xl h-screen tracking-wide font-extrabold leading-snug uppercase text-white flex items-center md:justify-center">
           <div className="bg-color1/40 rounded-full absolute size-80 blur-[100px] z-10"></div>
-          <p className="z-30 animate-pulse pl-5">
-            Get <br className="md:hidden" /> in <br className="md:hidden" /> Touch
-          </p>
+          <div className="z-30 animate-pulse pl-5 flex max-md:flex-col gap-x-8">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+              className="will-change-transform will-change-opacity"
+            >
+              Get
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
+              className="will-change-transform will-change-opacity"
+            >
+              in
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
+              className="will-change-transform will-change-opacity"
+            >
+              Touch
+            </motion.div>
+          </div>
         </div>
         <div className="form h-screen py-10 px-3 flex max-md:flex-col mt-10 gap-5">
           <div className="illustration w-full flex justify-center items-center h-1/4 md:h-full">
-            <img className="w-3/4 max-md:max-w-[20rem] md:w-[30rem]" src={msgIcon} alt="" />
+            <motion.img
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay:.2, ease: "easeInOut" }}
+              className="w-3/4 max-md:max-w-[20rem] md:w-[30rem]"
+              src={msgIcon}
+              alt=""
+            />
           </div>
           <div className="flex flex-col gap-8 py-10 px-3 w-full items-center h-full rounded-xl">
             <div className="input-name w-full md:w-3/4">
-              <input
-              autoComplete="off"
+              <motion.input
+              initial={{ opacity: 0, y:30}}
+              whileInView={{opacity: 1, y:0}}
+              transition={{ duration: 0.5, delay:.2}}
+                autoComplete="off"
                 className="bg-transparent border-color2 border-b py-2 px-3 w-full placeholder:text-color2/60 pl-3 focus:outline-none text-color2"
                 type="text"
                 name="name"
@@ -25,8 +59,11 @@ export const ContactUs = () => {
               />
             </div>
             <div className="input-name w-full md:w-3/4">
-              <input
-               autoComplete="off"
+              <motion.input
+              initial={{ opacity: 0, y:30}}
+              whileInView={{opacity: 1, y:0}}
+              transition={{ duration: 0.5, delay:.2}}
+                autoComplete="off"
                 className="bg-transparent border-color2 border-b py-2 px-3 w-full placeholder:text-color2/60 pl-3 focus:outline-none text-color2"
                 type="text"
                 name="name"
@@ -34,8 +71,11 @@ export const ContactUs = () => {
               />
             </div>
             <div className="input-name w-full md:w-3/4">
-              <input
-               autoComplete="off"
+              <motion.input
+              initial={{ opacity: 0, y:30}}
+              whileInView={{opacity: 1, y:0}}
+              transition={{ duration: 0.5, delay:.2}}
+                autoComplete="off"
                 className="bg-transparent border-color2 border-b py-2 px-3 w-full placeholder:text-color2/60 pl-3 focus:outline-none text-color2"
                 type="text"
                 name="name"
@@ -43,9 +83,12 @@ export const ContactUs = () => {
               />
             </div>
             <div className="input-name w-full md:w-3/4">
-              <textarea
+              <motion.textarea
+              initial={{ opacity: 0, y:30}}
+              whileInView={{opacity: 1, y:0}}
+              transition={{ duration: 0.5, delay:.2}}
                 rows={5}
-               autoComplete="off"
+                autoComplete="off"
                 className="bg-transparent border-color2 border-b rounded-none py-2 px-3 w-full placeholder:text-color2/60 pl-3 focus:outline-none text-color2 resize-none"
                 type="text"
                 name="name"
@@ -57,7 +100,7 @@ export const ContactUs = () => {
             </button>
           </div>
         </div>
-      <Footer />
+        <Footer />
       </div>
     </>
   );

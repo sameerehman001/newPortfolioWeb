@@ -25,7 +25,7 @@ export const Footer = () => {
               href="https://github.com/IrfanNaikwade28"
               target="_blank"
             >
-              <img src={github} alt="" />
+              <img className="cursor-pointer hover:scale-105" src={github} alt="" />
             </a>
           </div>
           <div className="icon">
@@ -34,11 +34,11 @@ export const Footer = () => {
               href="https://www.linkedin.com/in/irfan-naikwade/"
               target="_blank"
             >
-              <img className="cursor-pointer" src={linkedin} alt="" />
+              <img className="cursor-pointer hover:scale-105" src={linkedin} alt="" />
             </a>
           </div>
           <div className="icon">
-            <img src={telegram} alt="" />
+            <img className="cursor-pointer hover:scale-105" src={telegram} alt="" />
           </div>
         </div>
         <div className="text-white font-extralight text-xs text-center my-5">

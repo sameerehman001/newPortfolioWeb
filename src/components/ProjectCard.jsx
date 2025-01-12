@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import {motion} from "motion/react";
 export const ProjectCard = ({
   projectImage,
   title,
@@ -11,7 +12,11 @@ export const ProjectCard = ({
   };
   return (
     <>
-      <div className="project-card flex flex-col bg-white/5 w-[20rem] h-[20rem] rounded-md py-5 px-3">
+      <motion.div
+      initial={{ opacity: 0,y:200 }}
+      whileInView={{ opacity: 1,y:0 }}
+      transition={{duration:0.6,ease: "easeOut"}}
+      className="project-card flex flex-col bg-white/5 w-[20rem] h-[20rem] rounded-md py-5 px-3 will-change-transform will-change-opacity">
         <div className="project-image bg-white/5 w-full h-2/3 rounded-md flex flex-col justify-between">
           <div className="flex gap-1 py-1 pl-2 h-1/6">
             <div className="size-1 bg-red-500 rounded-full"></div>
@@ -20,7 +25,7 @@ export const ProjectCard = ({
           </div>
           <div className="image h-full w-full">
             <img
-              className="w-full h-full rounded-b-md object-cover bg-center"
+              className="w-full h-full rounded-b-md object-cover bg-center cursor-pointer"
               src={projectImage}
               alt=""
             />
@@ -47,7 +52,7 @@ export const ProjectCard = ({
             </button>
           </a>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
