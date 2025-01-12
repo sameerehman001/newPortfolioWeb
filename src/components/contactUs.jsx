@@ -21,7 +21,7 @@ export const ContactUs = () => {
     e.preventDefault();
     setStatus("Sending...");
     try {
-      const response = await fetch("http://localhost:5000/send", {
+      const response = await fetch("https://irfan-dev28.vercel.app/api/server", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,6 +39,7 @@ export const ContactUs = () => {
       setStatus("Error occurred. Try again.");
     }
   };
+  
 
   return (
     <>
