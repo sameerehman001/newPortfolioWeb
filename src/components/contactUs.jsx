@@ -39,7 +39,6 @@ export const ContactUs = () => {
       setStatus("Error occurred. Try again.");
     }
   };
-  
 
   return (
     <>
@@ -150,7 +149,7 @@ export const ContactUs = () => {
             >
              {status === "Sending..." ? "Sending..." : "Send it Now"}
             </button>
-            <p className="text-color2 text-xs">{status == "Message sent successfully!"? "Message sent successfully!":""}</p>
+            <p className="text-color2 text-xs">{status}</p>
           </form>
         </div>
         <Footer />
