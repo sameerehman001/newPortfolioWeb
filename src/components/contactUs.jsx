@@ -150,6 +150,7 @@ export const ContactUs = () => {
             >
              {status === "Sending..." ? "Sending..." : "Send it Now"}
             </button>
+            <p className="text-color2 text-xs">{status == "Message sent successfully!"? "Message sent successfully!":""}</p>
           </form>
         </div>
         <Footer />
