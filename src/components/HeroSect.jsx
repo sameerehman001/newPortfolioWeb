@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
-import heroIllustration from "../assets/images/Hero-illustrations.svg";
+import heroIllustration from "../assets/images/Hero-illustrations.png";
 import linkedin from "../assets/icons/linkedin.svg";
 import github from "../assets/icons/github.svg";
 import scrollIcon from "../assets/icons/scroll-animation.svg";
@@ -68,11 +68,12 @@ export const HeroSect = () => {
                 transition={{ duration: 1 }}
                 href="#Projects"
               >
-                <motion.button 
-                initial={{ opacity: 0, y:30 }}
-                whileInView={{opacity:1,y:0}}
-                transition={{duration:0.5,delay:0.3}}
-                className="bg-color1 hover:bg-color1Hover w-[14rem] md:w-[12rem] rounded-3xl uppercase text-center font-semibold cursor-pointer py-2">
+                <motion.button
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-color1 hover:bg-color1Hover w-[14rem] md:w-[12rem] rounded-3xl uppercase text-center font-semibold cursor-pointer py-2"
+                >
                   Explore Projects
                 </motion.button>
               </motion.a>
@@ -82,11 +83,12 @@ export const HeroSect = () => {
                 transition={{ duration: 1 }}
                 href="#Contact"
               >
-                <motion.button 
-                initial={{ opacity: 0, y:30 }}
-                whileInView={{opacity:1,y:0}}
-                transition={{duration:0.5,delay:0.5}}
-                className="text-color2 border-2 border-color2 hover:bg-color2 hover:text-color3 rounded-3xl w-[14rem] md:w-[12rem] uppercase text-center font-semibold cursor-pointer py-2">
+                <motion.button
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="text-color2 border-2 border-color2 hover:bg-color2 hover:text-color3 rounded-3xl w-[14rem] md:w-[12rem] uppercase text-center font-semibold cursor-pointer py-2"
+                >
                   Get in Touch
                 </motion.button>
               </motion.a>
@@ -131,7 +133,7 @@ export const HeroSect = () => {
               src={heroIllustration}
               alt=""
             />
-            <div className="absolute bottom-40 md:bottom-5">
+        <div className="absolute bottom-40 md:bottom-5">
               <div className="scroll-icon">
                 <motion.img
                   initial={{ opacity: 0 }}
