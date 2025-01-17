@@ -1,5 +1,6 @@
 import { RadarChart } from "./radarChart";
 import { easeInOut, motion } from "motion/react";
+import doc from "../assets/doc/download.pdf";
 import character from "../assets/images/character-removebg-preview.png";
 import js from "../assets/icons/skills-icon/javascript.svg";
 import cpp from "../assets/icons/skills-icon/cpp.svg";
@@ -94,12 +95,13 @@ export const AboutMe = () => {
                 dedicated to creating dynamic and responsive websites that
                 deliver seamless user experiences.
               </motion.div>
-              <button
-                onClick={() => alert("Sorry! Currently CV is not available...")}
-                className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-widest text-sm mt-5"
-              >
-                Download CV
-              </button>
+              <a href={doc} target="_blank">
+                <button
+                  className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-widest text-sm mt-5"
+                >
+                  Download CV
+                </button>
+              </a>
             </div>
             <div className="button"></div>
           </div>
@@ -182,12 +184,13 @@ export const AboutMe = () => {
               >
                 Skills Overview Radar
               </motion.div>
-              <motion.div 
-              initial={{opacity:0,scale:0.5}}
-              whileInView={{opacity:1,scale:1}}
-              transition={{duration: 0.5,delay:0.2}}
-              viewport={{amount:0.7}}
-              className="w-full h-full will-change-transform will-change-opacity">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ amount: 0.7 }}
+                className="w-full h-full will-change-transform will-change-opacity"
+              >
                 <RadarChart />
               </motion.div>
             </div>
