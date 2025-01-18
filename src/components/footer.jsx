@@ -1,6 +1,6 @@
 import github from "../assets/icons/github.svg";
 import linkedin from "../assets/icons/linkedin.svg";
-import telegram from "../assets/icons/telegram.svg";
+import chess from "../assets/icons/chess.svg";
 export const Footer = () => {
   return (
     <>
@@ -16,7 +16,12 @@ export const Footer = () => {
           <a href="#About" className="nav-option cursor-pointer">
             About Us
           </a>
-          <a onClick={()=>alert("Page is Under Development")} className="nav-option cursor-pointer">Blog</a>
+          <a
+            onClick={() => alert("Page is Under Development")}
+            className="nav-option cursor-pointer"
+          >
+            Blog
+          </a>
         </div>
         <div className="icons w-full flex justify-center mt-5 items-center gap-5">
           <div className="icon">
@@ -25,7 +30,11 @@ export const Footer = () => {
               href="https://github.com/IrfanNaikwade28"
               target="_blank"
             >
-              <img className="cursor-pointer hover:scale-105" src={github} alt="" />
+              <img
+                className="cursor-pointer hover:scale-105"
+                src={github}
+                alt=""
+              />
             </a>
           </div>
           <div className="icon">
@@ -34,12 +43,24 @@ export const Footer = () => {
               href="https://www.linkedin.com/in/irfan-naikwade/"
               target="_blank"
             >
-              <img className="cursor-pointer hover:scale-105" src={linkedin} alt="" />
+              <img
+                className="cursor-pointer hover:scale-105"
+                src={linkedin}
+                alt=""
+              />
             </a>
           </div>
-          <div className="icon">
-            <img className="cursor-pointer hover:scale-105" src={telegram} alt="" />
-          </div>
+          <a
+            href="https://www.chess.com/member/irfannaikwade28"
+            target="_blank"
+            className="icon"
+          >
+            <img
+              className="cursor-pointer hover:scale-105"
+              src={chess}
+              alt=""
+            />
+          </a>
         </div>
         <div className="text-white font-extralight text-xs text-center my-5">
           <div className="title">
