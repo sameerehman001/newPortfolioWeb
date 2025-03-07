@@ -12,6 +12,7 @@ import py from "../assets/icons/skills-icon/python.svg";
 import react from "../assets/icons/skills-icon/react-js.svg";
 import tailwind from "../assets/icons/skills-icon/tailwindcss.svg";
 import php from "../assets/icons/skills-icon/php.svg";
+import ml from "../assets/icons/skills-icon/ml.png"
 
 // projectImagess
 import onco from "../assets/images/projectImages/project1.png"
@@ -22,6 +23,7 @@ import algo from "../assets/images/projectImages/project5.png"
 import furni from "../assets/images/projectImages/project6.png"
 import ftc from "../assets/images/projectImages/project7.png"
 import ngo from "../assets/images/projectImages/project8.png"
+import metashield from "../assets/images/projectImages/project9.png"
 
 export const Projects = {
     "Onco": {
@@ -38,6 +40,20 @@ export const Projects = {
             "reportLink": ""
         },
         "githubLink": "https://github.com/IrfanNaikwade28/Lungs-Cancer-Detection-System.git"
+    },
+    "MetaShield": {
+        "image": metashield,
+        "title": "MetaShield",
+        "subTitle": "AI-Powered Sensitive Document Classification",
+        "insights": {
+            "desc": `MetaShield is an AI-powered solution that classifies documents as Sensitive (Y) or Non-Sensitive (N)
+                  using only metadata—no content analysis required! It enhances security and compliance with regulations
+                  like GDPR, HIPAA, and DPDP by automating document classification.`,
+            "category": "Cybersecurity, AI/ML, Web Application",
+            "techStack": [py,django, react, tailwind, ml],
+            "reportLink": ""
+        },
+        "githubLink": "https://github.com/IrfanNaikwade/MetaShield.git"
     },
     "qzwz": {
         "image": qz,
