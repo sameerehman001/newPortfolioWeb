@@ -53,7 +53,7 @@ export const Projects = {
             "techStack": [py,django, react, tailwind, ml],
             "reportLink": ""
         },
-        "githubLink": "https://github.com/IrfanNaikwade/MetaShield.git"
+        "githubLink": "https://github.com/IrfanNaikwade28/MetaShield.git"
     },
     "qzwz": {
         "image": qz,
