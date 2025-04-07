@@ -15,7 +15,7 @@ import php from "../assets/icons/skills-icon/php.svg";
 import ml from "../assets/icons/skills-icon/ml.png"
 
 // projectImagess
-import onco from "../assets/images/projectImages/project1.png"
+import respireX from "../assets/images/projectImages/project10.jpg"
 import qz from "../assets/images/projectImages/project2.png"
 import tesla from "../assets/images/projectImages/project3.png"
 import emd from "../assets/images/projectImages/project4.png"
@@ -26,20 +26,20 @@ import ngo from "../assets/images/projectImages/project8.png"
 import metashield from "../assets/images/projectImages/project9.png"
 
 export const Projects = {
-    "Onco": {
-        "image": onco,
-        "title": "OncoScence",
-        "subTitle": "Lung Cancer Detection System",
+    "RespireX": {
+        "image": respireX,
+        "title": "RespireX",
+        "subTitle": "Lung Disease Detection System",
         "insights": {
             "desc": ` OncoScence is a lung cancer detection system designed to
                   analyze X-ray images efficiently. This project simplifies the
                   diagnostic process by providing real-time insights, improving
                   accuracy, and reducing diagnostic time for doctors.`,
-            "category": "Healthcare, AI/ML, Web Application",
-            "techStack": [py, django, html, css, js],
+            "category": "Healthcare, ML, Web Application",
+            "techStack": [ml, py, django, js, react, tailwind],
             "reportLink": ""
         },
-        "githubLink": "https://github.com/IrfanNaikwade28/Lungs-Cancer-Detection-System.git"
+        "githubLink": "https://github.com/IrfanNaikwade28/RespireX.git"
     },
     "MetaShield": {
         "image": metashield,
