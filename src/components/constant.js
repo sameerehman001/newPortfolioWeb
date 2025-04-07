@@ -31,7 +31,7 @@ export const Projects = {
         "title": "RespireX",
         "subTitle": "Lung Disease Detection System",
         "insights": {
-            "desc": ` OncoScence is a lung cancer detection system designed to
+            "desc": ` RespireX is a lung disease detection system designed to
                   analyze X-ray images efficiently. This project simplifies the
                   diagnostic process by providing real-time insights, improving
                   accuracy, and reducing diagnostic time for doctors.`,
