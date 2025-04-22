@@ -10,7 +10,7 @@ export const ContactUs = () => {
     message: "",
   });
 
-  const [status, setStatus] = useState("");
+  // const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,25 +19,25 @@ export const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
-    try {
-      const response = await fetch("https://irfan-devs.vercel.app/api/server", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        setStatus("Failed to send the message.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setStatus("Error occurred. Try again.");
-    }
+    // setStatus("Sending...");
+    // try {
+    //   const response = await fetch("https://irfan-devs.vercel.app/api/server", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(formData),
+    //   });
+    //   if (response.ok) {
+    //     setStatus("Message sent successfully!");
+    //     setFormData({ name: "", email: "", phone: "", message: "" });
+    //   } else {
+    //     setStatus("Failed to send the message.");
+    //   }
+    // } catch (error) {
+    //   console.error("Error:", error);
+    //   setStatus("Error occurred. Try again.");
+    // }
   };
 
   return (
@@ -147,7 +147,7 @@ export const ContactUs = () => {
               type="submit"
               className="bg-color2 text-color3 hover:bg-color2/80 hover:scale-105 transition duration-200 rounded-xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-wide self-center md:w-[15rem]"
             >
-             {status === "Sending..." ? "Sending..." : "Send it Now"}
+              {status === "Sending..." ? "Sending..." : "Send it Now"}
             </button>
             <p className="text-color2 text-xs">{status}</p>
           </form>

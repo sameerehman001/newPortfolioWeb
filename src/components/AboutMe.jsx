@@ -1,6 +1,6 @@
 import { RadarChart } from "./radarChart";
 import { easeInOut, motion } from "motion/react";
-import doc from "../assets/doc/download.pdf";
+import doc from "../assets/doc/resume_samee_rehman MERN.pdf";
 import character from "../assets/images/character-removebg-preview.png";
 import js from "../assets/icons/skills-icon/javascript.svg";
 import cpp from "../assets/icons/skills-icon/cpp.svg";
@@ -89,16 +89,19 @@ export const AboutMe = () => {
                 viewport={{ amount: 0.7 }}
                 className="about-me text-white text-sm leading-5 mt-3 text-justify"
               >
-                Hi, I&apos;m Irfan! I’ve completed a Diploma in Computer Science
-                and Engineering and I am currently pursuing a B.Tech in Data
-                Science. With a passion for web development and design, I’m
-                dedicated to creating dynamic and responsive websites that
-                deliver seamless user experiences.
+                Hi, I&apos;m Samee Ur Rehman! I’ve completed my Bachlors in
+                Software Engineering and have 2 years of experience crafting
+                responsive, high performance web applications using React.js,
+                JavaScript, and Redux. Skilled in UI/UX design, REST API
+                integration, and optimizing performance for seamless user
+                experiences. Currently expanding into backend development with
+                Node.js, Express.js, and MongoDB to transition into a MERN Stack
+                Developer. Committed to writing clean, maintainable code and
+                staying ahead of the latest web development trends to build
+                innovative and scalable solutions.
               </motion.div>
               <a href={doc} target="_blank">
-                <button
-                  className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-widest text-sm mt-5"
-                >
+                <button className="bg-color1 text-white hover:bg-color1Hover rounded-3xl text-center font-semibold cursor-pointer w-2/3 h-[5vh] tracking-widest text-sm mt-5">
                   Download CV
                 </button>
               </a>

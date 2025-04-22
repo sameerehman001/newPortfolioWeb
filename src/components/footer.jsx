@@ -1,6 +1,6 @@
 import github from "../assets/icons/github.svg";
 import linkedin from "../assets/icons/linkedin.svg";
-import chess from "../assets/icons/chess.svg";
+// import chess from "../assets/icons/chess.svg";
 export const Footer = () => {
   return (
     <>
@@ -27,7 +27,7 @@ export const Footer = () => {
           <div className="icon">
             <a
               className=""
-              href="https://github.com/IrfanNaikwade28"
+              href="https://github.com/sameerehman001"
               target="_blank"
             >
               <img
@@ -40,7 +40,7 @@ export const Footer = () => {
           <div className="icon">
             <a
               className=""
-              href="https://www.linkedin.com/in/irfan-naikwade/"
+              href="https://www.linkedin.com/in/samee6812/"
               target="_blank"
             >
               <img
@@ -50,7 +50,7 @@ export const Footer = () => {
               />
             </a>
           </div>
-          <a
+          {/* <a
             href="https://www.chess.com/member/irfannaikwade28"
             target="_blank"
             className="icon"
@@ -60,11 +60,11 @@ export const Footer = () => {
               src={chess}
               alt=""
             />
-          </a>
+          </a> */}
         </div>
         <div className="text-white font-extralight text-xs text-center my-5">
           <div className="title">
-            ©2025 Irfan Naikwade. All rights reserved.
+            ©2025 Samee Ur Rehman. All rights reserved.
           </div>
           <div className="title">Bringing ideas to life with code.</div>
           <div className="title">Thanks for visiting!.</div>

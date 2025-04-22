@@ -22,7 +22,9 @@ export const HeroSect = () => {
           <div className="heroText h-full w-full z-30 flex flex-col md:justify-center">
             <div className="flex flex-col text-white pl-5 tracking-wide md:gap-1">
               <span className="font-semibold text-2xl md:text-4xl">
-                Hi! I&apos;m Irfan,
+                Hi I&apos;m
+                <br />
+                Samee Ur Rehman,
               </span>
               <span className="font-semibold text-2xl md:text-4xl flex">
                 A Web&nbsp;
@@ -99,7 +101,7 @@ export const HeroSect = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 className=""
-                href="https://www.linkedin.com/in/irfan-naikwade/"
+                href="https://www.linkedin.com/in/samee6812/"
                 target="_blank"
               >
                 <img
@@ -113,7 +115,7 @@ export const HeroSect = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
                 className=""
-                href="https://github.com/IrfanNaikwade28"
+                href="https://github.com/sameerehman001"
                 target="_blank"
               >
                 <img
@@ -133,7 +135,7 @@ export const HeroSect = () => {
               src={heroIllustration}
               alt=""
             />
-        <div className="absolute bottom-40 md:bottom-5">
+            <div className="absolute bottom-40 md:bottom-5">
               <div className="scroll-icon">
                 <motion.img
                   initial={{ opacity: 0 }}
