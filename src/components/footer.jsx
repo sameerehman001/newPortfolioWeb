@@ -51,7 +51,7 @@ export const Footer = () => {
             </a>
           </div>
           {/* <a
-            href="https://www.chess.com/member/irfannaikwade28"
+            href="https://www.chess.com/member/Samee-Ur-Rehman28"
             target="_blank"
             className="icon"
           >

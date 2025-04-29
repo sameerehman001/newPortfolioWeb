@@ -128,7 +128,7 @@ export const Projects = {
   //       techStack: [react, tailwind, figma, html, css, js],
   //       reportLink: "",
   //     },
-  //     githubLink: "https://github.com/IrfanNaikwade28/NGO-Portfolio.git",
+  //     githubLink: "https://github.com/Samee-Ur-Rehman28/NGO-Portfolio.git",
   //   },
   //   ftc: {
   //     image: ftc,
@@ -140,7 +140,7 @@ export const Projects = {
   //       techStack: [html, css, js],
   //       reportLink: "",
   //     },
-  //     githubLink: "https://github.com/IrfanNaikwade28/Flip-the-Card.git",
+  //     githubLink: "https://github.com/Samee-Ur-Rehman28/Flip-the-Card.git",
   //   },
   //   tesla: {
   //     image: tesla,
@@ -152,6 +152,6 @@ export const Projects = {
   //       techStack: [html, css, js],
   //       reportLink: "",
   //     },
-  //     githubLink: "https://github.com/IrfanNaikwade28/Web-Project-Tesla.git",
+  //     githubLink: "https://github.com/Samee-Ur-Rehman28/Web-Project-Tesla.git",
   //   },
 };
